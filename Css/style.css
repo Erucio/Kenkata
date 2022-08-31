@@ -57,6 +57,7 @@ html, body{
 .navbar{
     background-color: #20D3C2;
     color: #fff;
+    
 }
     .navbar > .container{
         height: 100%;
@@ -65,15 +66,15 @@ html, body{
         align-items: center;
     }
 
-/* Site-settings */
-.navbar .site-settings{
-    display: flex;
-}
 .navbar .navlinks{
     display: none;
 }
 .navbar .navlinks .site-links{
     display: none;
+}
+/* Site-settings */
+.navbar .site-settings{
+    display: flex;
 }
 
     .navbar .site-settings .dropdown-theme {
@@ -92,6 +93,8 @@ html, body{
 
     .navbar .site-settings .dropdown-theme .dropdown-menu{
         border: none;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
     }
 
         .navbar .site-settings .dropdown-theme .dropdown-menu .dropdown-item{
@@ -99,6 +102,7 @@ html, body{
             border: none;
             width: 100%;
             margin: 0;
+            padding: 0 0.3rem;
         }
 
             .navbar .site-settings .dropdown-theme .dropdown-menu .dropdown-item:hover{
@@ -142,6 +146,8 @@ html, body{
         padding-bottom: 2.2rem;
     }
     .Menu .brand{
+        position: relative;
+        right: 0.5rem;
         flex: 2;
     }
     .Menu .search{
@@ -179,6 +185,7 @@ html, body{
         .Menu a:last-child{
             margin: 0 0 0 0.8rem;
         }
+/* Menu bottom */
 .Menu nav{
     border-top: 1px solid var(--color-gray-3);
     border-bottom: 1px solid var(--color-gray-3);
@@ -204,6 +211,10 @@ html, body{
             align-items: center;
             padding: 0.7rem 1rem;
         }
+        
+            .Menu .browse-categories:hover .dropdown-menu{
+                display: block;
+            }
             .Menu nav .browse-categories button:hover{
                 background-color: var(--color-theme-light);
                 color: var(--color-theme-dark);
@@ -219,6 +230,7 @@ html, body{
                 }
             .Menu .browse-categories .dropdown-theme .dropdown-menu{
                 background-color: var(--color-theme);
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
                 border: none;
                 width: 100%;
             }
@@ -228,6 +240,7 @@ html, body{
                     border: none;
                     width: 100%;
                     margin: 0;
+                    text-align: center;
                 }
                     .Menu .browse-categories .dropdown-theme .dropdown-menu .dropdown-item:hover{
                         background-color: var(--color-theme-light);
