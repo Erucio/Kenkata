@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <!-- Top-banner -->
     <header>
         <nav class="navbar">
             <div class="container">
@@ -55,20 +56,31 @@
                 </div>
             </div>
         </nav>
+        <!-- Brand/Searchbar/Sitelinks -->
         <div class="Menu">
             <div class="container">
                 <div class="brand">
                     <a href="index.html"><img src="Images/Logo.svg" alt="Logotype"></a>
                 </div>
-                 <div class="search">Mitten</div>
+                 <!-- <div class="search">SEARCHBAR</div> -->
+                 <div class="fixedlinks">
+                    <a href="#"><i class="fa-regular fa-user me-2"></i></a>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                    <a href="#"><i class="fa-regular fa-search"></i></a>
+                    <a href="#"><i class="fa-regular fa-shuffle"></i></a>
+                    <a href="#"><i class="fa-regular fa-cart-shopping me-2"></i>
+                </div>
                 <div class="links">
                     <a href="#"><i class="fa-regular fa-user me-2"></i>My account</a>
                     <a href="#"><i class="fa-regular fa-heart"></i></a>
                     <a href="#"><i class="fa-regular fa-shuffle"></i></a>
-                    <a href="#"><i class="fa-regular fa-cart-shopping me-2"></i>
-                        <span id="cart-total">€99999.00</span></a>
+                    <a id="cart" href="#">
+                            <span class="badge rounded-pill">99+</span>
+                        <i class="fa-regular fa-cart-shopping me-2"></i>
+                        <span>€9999.00</span></a>
                 </div>
             </div>
+            <!-- Browse-categories/Special offer -->
             <nav>
                 <div class="container">
                     <div class="browse-categories">
@@ -93,5 +105,99 @@
             </nav>    
         </div>
     </header>
+<!-- Showcase -->
+    <section class="showcase">
+        <div class="container">
+            <div class="showcase-body">
+                <h1>Shopping is <strong>MORE FUN</strong></h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates cum exercitationem expedita quos asperiores porro illum reiciendis!</p>
+                <a href="#" class="btn btn-lg btn-white">SHOP NOW</a>
+            </div>
+            <img src="images/Banner-thumb.svg" alt="Showcase-image">
+        </div>
+
+    </section>
+    <section class="webshop-info">
+        <div class="container">
+            <div class="box">
+                <img src="images/Free Shipping.svg" alt="Free shipping">
+                <div>
+                    <h1>Free shipping</h1>
+                    <p>For a local customer, we provide free shipping facility</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/24 icon.svg" alt="24/7 services">
+                <div>
+                    <h1>24/7 Support</h1>
+                    <p>For any inquiry, we are available 24 hours every day</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/payment icon.svg" alt="Online payment">
+                <div>
+                    <h1>Online payment</h1>
+                    <p>You can pay quickly and easily with our online payment system</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/Outline.svg" alt="Fast delivery">
+                <div>
+                    <h1>Fast delivery</h1>
+                    <p>We understand your urgency and we deliver in a fast way</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="shop-by-category">
+        <div class="container">
+          <div class="section-title">
+            <h1>SHOP BY<span> CATEGORY</span></h1>
+            <img src="images/Squiggly.svg" alt="underscore">
+            <p>We always try to give you the best product within a fast and reliable way</p>
+          </div>
+          <div class="grid">
+            <a href="#" id="category-box1" class="category-box">
+                <div class="category-box-title">Men
+                    <span>140 Products</span>
+                </div>
+
+            </a>
+            <a href="#" id="category-box2" class="category-box">
+                <div class="category-box-title">Women
+                    <span>230 Products</span>
+                </div>
+            </a>
+            <a href="#" id="category-box3" class="category-box">
+                <div class="category-box-title">Kids
+                    <span>88 Products</span>
+                </div>
+            </a>
+            <a href="#" id="category-box4" class="category-box">
+                <div class="category-box-title">Shoes
+                    <span>55 Products</span>
+                </div>
+            </a>
+            <a href="#" id="category-box5" class="category-box">
+                <div class="category-box-title">Hats
+                    <span>22 Products</span>
+                </div>
+            </a>
+            <a href="#" id="category-box6" class="category-box">
+                <div class="category-box-title">Sunglasses
+                    <span>20 Products</span>
+                </div>
+            </a>
+            <a href="#" id="category-box7" class="category-box">
+                <div class="category-box-title">Watches
+                    <span>11 Products</span>
+                </div>
+            </a>
+            
+          </div>
+        </div>
+    </section>
+
+
 </body>
 </html>
