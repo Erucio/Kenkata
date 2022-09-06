@@ -377,9 +377,7 @@ html, body{
         .webshop-info .box:hover img{
             filter: brightness(1000);
         }
-.shop-by-category{
 
-}
     .shop-by-category .grid{
         gap: 0.8rem;
         display: grid;
