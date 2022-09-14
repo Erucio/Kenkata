@@ -61,13 +61,16 @@ html, body{
     font-weight: var(--font-weight-medium);
     padding-left: 1.4rem;
     padding-right: 1.4rem;
-    transition: 0.2 ease-in-out;
+    transition: 0.2s ease-in-out;
+    
 }
     .btn-white:hover{
         background-color: var(--color-theme-light);
         border: none;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         transform: scale(1.2);
+        color: var(--color-theme-dark);
+        font-weight: bold;
 
 
     }
@@ -87,6 +90,12 @@ html, body{
     .section-title p{
         margin: 1rem;
     }
+.instock{
+    color:var(--color-product-instock); 
+}
+.outofstock{
+    color:var(--color-product-outofstock);
+}
 
 @keyframes growDown {
     0% {
@@ -615,6 +624,57 @@ html, body{
     .new-arrivals .new-price .checked{
         color: var(--color-theme);
     }
+/* BREAK */
+.break{
+    background-color: var(--color-gray-0);
+    margin-bottom: 5rem;
+}
+    .break .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--color-white);
+        font-family: var(--font-play);
+
+    }
+        .break .container .salebox{
+            display: block;
+            background-color: var(--color-theme);
+            width: 25%;
+            padding: 8rem 1rem;
+            align-items: center;
+            text-align: center; 
+        }
+            .break .container .salebox h1{
+                font-weight: bold;
+                font-size: var(--font-size-60);
+            }
+                .break .container .salebox h1 span{
+                    font-weight: bold;
+                    font-size: var(--font-size-36);
+                }
+            .break .container .salebox button{
+                border: none;
+                border-radius: var(--border-radius-medium);
+                background-color: var(--color-theme-dark);
+                color: var(--color-white);
+                font-weight: var(--font-weight-medium);
+                padding: 0.6rem 1.4rem;
+                transition: 0.2s ease-in-out;
+            }
+                .break .container .salebox button:hover{
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    transform: scale(1.2);
+
+                }
+
+    
+
+        .break .container .info{
+            width: 30%;
+            align-items: center;
+        }
+/* FEATURED PRODUCTS */
 
 
 
