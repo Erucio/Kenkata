@@ -211,8 +211,42 @@ html, body{
         flex: 2;
     }
     .Menu .search{
-        flex: 3;
+        flex: 4;
+        display: none;
     }
+        .Menu .search #searchbox-form{
+            border-radius: var(--border-radius-medium);
+            height: 45px;
+            margin: auto;
+            position: relative;
+        }
+        .Menu .search #searchbox-form input{
+            position: absolute;
+            border-radius: var(--border-radius-medium);
+            height: 100%;
+            width: 100%;
+            outline: none;
+            border: 1px solid var(--color-gray-2);
+            font-size: 0.9rem;
+            padding-left: 1.3rem;
+        }
+        .Menu .search #searchbox-form button{
+            position: absolute;
+            top: 0;
+            right: -2px;
+            width: 50px;
+            height: 100%;
+            background-color: var(--color-theme);
+            color: var(--color-white);
+            border: none;
+            border-radius: 0 var(--border-radius-medium) var(--border-radius-medium) 0;
+            transition: 0.2s ease-in-out;
+
+        }
+            .Menu .search #searchbox-form:hover button{
+                background-color: var(--color-theme-dark);
+            }
+
     .fixedlinks {
         background-color: var(--color-theme);
         height: 3.4rem;
@@ -660,7 +694,7 @@ html, body{
                 color: var(--color-white);
                 font-weight: var(--font-weight-medium);
                 padding: 0.6rem 1.4rem;
-                transition: 0.2s ease-in-out;
+                transition: all 0.2s ease-in-out;
             }
                 .break .container .salebox button:hover{
                     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -675,8 +709,281 @@ html, body{
             align-items: center;
         }
 /* FEATURED PRODUCTS */
+/* FLASH SALE */
+.flash-sale{
+    background-color: var(--color-theme-dark);
+    margin-bottom: 5rem;
+}
+    .flash-sale .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--color-white);
+        font-family: var(--font-play);
+
+    }
+        .flash-sale .container .salebox{
+            display: block;
+            background-color: var(--color-theme);
+            width: 25%;
+            padding: 2rem 1rem;
+            align-items: center;
+            text-align: center; 
+            margin-bottom: 8rem;
+        }
+            .flash-sale .container .salebox h1{
+                font-weight: bold;
+                font-size: var(--font-size-60);
+            }
+                .flash-sale .container .salebox h1 span{
+                    font-weight: bold;
+                    font-size: var(--font-size-36);
+                }
+
+.flash-sale .countdown{
+    display: block;
+}
+    .flash-sale .countdown .timer{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+        .flash-sale .countdown .timer .circle{
+            border: dotted 2px var(--color-theme);
+            height: 6rem;
+            width: 6rem;
+            background-color: var(--color-white);
+            border-radius: var(--border-radius-rounded);
+            text-align: center;
+            margin: 1rem;
+        }
+            .flash-sale .countdown .timer .circle h1{
+                font-family: var(--font-play);
+                color: var(--color-theme);
+                margin: 0;
+                padding-top: 0.8rem;
+            }
+            .flash-sale .countdown .timer .circle p{
+                font-family: var(--font-play);
+                color: var(--color-theme-dark);
+                font-size: 0.6rem;
+            }
+        .flash-sale .countdown a{
+            margin-top: 1.5rem;
+            margin-left: 37%;
+        }
+/* TOP SELLERS */
+.top-sellers .grid{
+    justify-content: center;
+    width: 100%;
+    gap: 0.8rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px,654px));
+    grid-template-rows: repeat(2, minmax(150px,333px));
+    padding-bottom: 6rem;
+}
+#topsell-box1{
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+#topsell-box2{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+#topsell-box3{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
 
 
+
+
+
+
+
+    .top-sellers .grid .card-menu{
+        position: absolute;
+        z-index: 1;
+        padding-left: 0.9rem;
+        top: 100%;
+        right: 5%;
+        font-size: 1.25rem;
+        background-color: var(--color-white);
+        list-style: none;
+        color: var(--color-gray-0);
+        border-radius: var(--border-radius-medium);
+        width: 50px;
+        transition: top 0.2s ease-in-out;
+    
+        
+    }
+        .top-sellers .grid .card-menu a{
+            list-style: none;
+            color: var(--color-gray-0);
+        }
+            .top-sellers .grid .card-menu a:hover{
+                color: var(--color-theme);
+            }
+
+.top-sellers .box{
+    height: 649px;
+    border-radius: var(--border-radius-small);
+    background-color: var(--color-gray-3);
+    overflow: hidden;
+    position: relative;
+    transition: 0.2s ease-in-out;
+}
+.top-sellers .box .new-box-title{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    height: 2.3rem;
+    font-weight: var(--font-weight-medium);
+    background-color: var(--color-theme-dark);
+    color: var(--color-white);
+    transition: 0.2s ease-in-out;
+}
+   .top-sellers .box:hover .new-box-title{
+        padding-top: 75%;
+        margin-top: 0;
+        height: 100%;
+        opacity: 80%;
+        line-height: 2rem; 
+    }
+    .top-sellers .box:hover .card-menu{
+        top: 20px;
+    }
+    .top-sellers .box-thin{
+        height: 302px;
+        border-radius: var(--border-radius-small);
+        background-color: var(--color-gray-3);
+        overflow: hidden;
+        position: relative;
+        transition: 0.2s ease-in-out;
+    }
+    .top-sellers .box-thin .new-box-title{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        height: 2.3rem;
+        font-weight: var(--font-weight-medium);
+        background-color: var(--color-theme-dark);
+        color: var(--color-white);
+        margin: 0;
+        transition: 0.2s ease-in-out;
+    }
+       .top-sellers .box-thin:hover .new-box-title{
+            padding-top: 23%;
+            margin-top: 0;
+            height: 100%;
+            opacity: 80%;
+            line-height: 2rem; 
+        }
+        .top-sellers .box-thin:hover .card-menu{
+            top: 20px;
+        }
+    
+
+    .top-sellers .new-box-title h1{
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
+    .top-sellers .new-box-title button{
+        color: #fff;
+        background-color: transparent;
+        border: 1px solid white;
+    }
+        .top-sellers .new-box-title button:hover{
+            font-weight: bold;
+        }
+
+        .top-sellers .new-box-title .old-price{
+        text-decoration: line-through;
+       }
+
+
+
+    .top-sellers .new-price{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .top-sellers .new-price h1{
+        font-size: 1.25rem;
+        color: var(--color-theme);
+    }
+    .top-sellers .new-price i{
+        color: var(--color-theme);
+    }
+    .top-sellers .new-price .checked{
+        color: var(--color-theme);
+    }
+/* SUBSCRIBE NOW */
+.subscribe{
+    background-color: var(--color-gray-4);
+}
+.subscribe .container {
+    padding: 3.5rem 0;
+    display: block;
+    font-family: var(--font-play);
+    position: relative;
+    overflow: hidden;
+}
+    .subscribe .container h1{
+        font-weight: bold;
+        font-size: var(--font-size-36);
+    }
+        .subscribe .container h1 span{
+            font-weight: bold;
+            font-size: var(--font-size-36);
+            color: var(--color-theme);
+        }
+        .subscribe .container p{
+            width: 35%;
+        }
+        .subscribe #subform{
+            border-radius: var(--border-radius-medium);
+            height: 46px;
+            position: relative;
+            width: 30%;
+        }
+        .subscribe  #subform input{
+            position: absolute;
+            border-radius: var(--border-radius-medium);
+            height: 100%;
+            width: 100%;
+            outline: none;
+            border: 1px solid var(--color-gray-2);
+            font-size: 0.9rem;
+            padding-left: 1.3rem;
+        }
+        .subscribe #subform button{
+            position: absolute;
+            top: 10%;
+            right: 1%;
+            width: 120px;
+            height: 80%;
+            background-color: var(--color-theme);
+            color: var(--color-white);
+            border: none;
+            border-radius: var(--border-radius-medium);
+            transition: 0.2s ease-in-out;
+        }
+            .subscribe #subform button:hover{
+                background-color: var(--color-theme-dark);
+            }
+.subscribe .greybox{
+    position: absolute;
+    top: 0;
+    right: -2px;
+    background-color: var(--color-gray-1);
+    height: 100%;
+    width: 50%;
+
+}
 
 
 
@@ -729,7 +1036,11 @@ html, body{
 
 }
 
-@media (min-width: 992px){      
+@media (min-width: 992px){   
+    .Menu .search{
+        display: inline;
+        flex: 3;
+    }   
     .navbar .navlinks .site-links{
         display: inline;
          }
