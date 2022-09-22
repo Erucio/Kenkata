@@ -3,6 +3,7 @@
     --color-theme: #20D3C2;
     --color-theme-light: #EDFCFA;
     --color-theme-dark: #0E153D;
+    --color-theme-shadow: #50546e;
     --color-dark: #080C24;
     --color-white: #fff;
     --color-gray-0: #AAAAAA;
@@ -37,6 +38,9 @@ html, body{
     font-family: var(--font-roboto);
     font-weight: var(--font-weight-regular);
     color: var(--color-theme-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 .btn-theme{
     background-color: var(--color-theme);
@@ -49,8 +53,6 @@ html, body{
 }
     .btn-theme:hover{
         background-color: var(--color-theme-light);
-        border: none;
-        transform: scale(1.2);
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     }
 .btn-white{
@@ -95,6 +97,9 @@ html, body{
 }
 .outofstock{
     color:var(--color-product-outofstock);
+}
+.required{
+    color: var(--color-theme);
 }
 
 @keyframes growDown {
@@ -177,7 +182,7 @@ html, body{
         text-decoration: none;
         color: #fff;
         margin: 1.2rem;
-        transition: 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
     }
         .navbar .navlinks a:hover{
             color: var(--color-theme-dark);
@@ -279,6 +284,7 @@ html, body{
             position: absolute;
             top: -0.9rem;
             left: 0.3rem;    
+            transition: 0.2s ease-in-out;
         }
         .Menu .links #cart:hover .badge{
             background-color: var(--color-theme-dark);
@@ -982,13 +988,13 @@ html, body{
     background-color: var(--color-gray-1);
     height: 100%;
     width: 50%;
-
 }
 
 
 
 /* Footer */
 .footer{
+    margin-top: auto;
     background-color: var(--color-theme-dark);
     color: var(--color-white);
 }
@@ -1119,4 +1125,149 @@ html, body{
         width: 100%;
     }
 }
-        
+
+/* MY ACCOUNT PAGE */
+.site-title{
+    background-color: var(--color-theme-shadow);
+    color: #fff;
+    padding: 3rem 0;
+}
+.site-title .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.site-title h1{
+    color: var(--color-theme);
+    font-size: 1.5rem;
+    font-family: var(--font-roboto);
+    font-weight: var(--font-weight-medium);
+}
+.site-title ul{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.site-title .breadcrumb{
+    list-style: none;
+    margin: 0;
+}
+    .site-title .breadcrumb li{
+        display: inline;
+        font-size: 18px;
+    }
+    .site-title .breadcrumb li+li:before{
+        padding: 0 0.7rem 0 1rem;
+        color: var(--color-white);
+        content: "/\00a0";
+    }
+    .site-title .breadcrumb li a{
+        color: var(--color-theme);
+        text-decoration: none;
+        transition: 0.2s ease-in-out;
+    }
+    .site-title .breadcrumb li a:hover{
+        color: var(--color-white);
+        text-shadow: 0 1px var(--color-white);
+        text-decoration: underline;
+    }
+
+/* SIGNUP SIGNIN */
+.signup-signin{
+    margin: 6rem 0;
+}
+    .signup-signin .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+    .signup-signin .card{
+        padding: 1.5rem;
+        border: none;
+        border-radius: var(--border-radius-small);
+        background-color: var(--color-gray-4);
+        margin-bottom: auto;
+    }
+        .signup-signin .card .card-body h1{
+            font-family: var(--font-roboto);
+            font-weight: var(--font-weight-medium);
+            color: var(--color-theme-dark);
+            font-size: 1.5rem;
+        }
+        .signup-signin .card .card-body .card-text{
+            margin: 1.5rem 0;
+            line-height: 2;
+        }
+            .signup-signin .card .card-body .card-text a{
+                color: var(--color-theme);
+                text-decoration: none;
+            }
+                .signup-signin .card .card-body .card-text a:hover{
+                    text-decoration: underline;
+                }
+
+
+            .signup-signin .card .card-body .card-text.text-small{
+                color: #777777;
+                font-size: 0.875rem;
+            }
+.form-theme input{
+    display: block;
+    width: 100%;
+    border: none;
+}
+.alt-login h1 {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 2px solid var(--color-theme-dark); 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+} 
+    .alt-login h1 span { 
+        font-size: 1.2rem;
+        font-family: var(--font-roboto);    
+        background:var(--color-gray-4); 
+        padding:0 2.5rem; 
+    }
+ .login-help{
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-roboto);
+    color: var(--color-theme-dark);
+    margin-bottom: 1rem;
+
+ }
+ .login-help input{
+    width: 3%;
+    margin-bottom: 1rem;
+ }
+ .login-help label{
+    margin-right: 17rem;
+
+ }
+    .login-help a{
+        text-decoration: none;
+        color: var(--color-theme);
+    }
+        .login-help a:hover{
+            text-decoration: underline;
+        }
+
+.facebook-google-login{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+    .facebook-google-login img{
+        transition: 0.2s ease-in-out;
+
+    }
+        .facebook-google-login img:hover{
+            transform: scale(1.05);
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+        }
+
+ 
