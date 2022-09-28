@@ -3,7 +3,7 @@
     --color-theme: #20D3C2;
     --color-theme-light: #EDFCFA;
     --color-theme-dark: #0E153D;
-    --color-theme-shadow: #50546e;
+    --color-theme-shadow: #50546E;
     --color-dark: #080C24;
     --color-white: #fff;
     --color-gray-0: #AAAAAA;
@@ -50,6 +50,7 @@ html, body{
     padding-left: 1.4rem;
     padding-right: 1.4rem;
     border: none;
+    transition: 0.2s ease-in-out;
 }
     .btn-theme:hover{
         background-color: var(--color-theme-light);
@@ -284,7 +285,7 @@ html, body{
             position: absolute;
             top: -0.9rem;
             left: 0.3rem;    
-            transition: 0.2s ease-in-out;
+            transition: 0.3s;
         }
         .Menu .links #cart:hover .badge{
             background-color: var(--color-theme-dark);
@@ -299,13 +300,13 @@ html, body{
         text-decoration: none;
         color: var(--color-theme-dark);
         margin: 0 0.8rem;
-        transition: 0.2s ease-in-out;
+        transition: 0.2s;
 
 
     }
 
         .Menu .links a:hover{
-            text-shadow: 0 0.025em var(--color-theme-dark),0 -0.025em var(--color-theme-dark),0.02em 0 var(--color-theme-dark),-0.02em 0 var(--color-theme-dark);
+            text-shadow: 0 0.02em var(--color-theme-dark),0 -0.02em var(--color-theme-dark),0.02em 0 var(--color-theme-dark),-0.02em 0 var(--color-theme-dark);
 
         }
 
@@ -779,6 +780,9 @@ html, body{
             margin-left: 37%;
         }
 /* TOP SELLERS */
+.top-sellers .container{
+    padding: 0;
+}
 .top-sellers .grid{
     justify-content: center;
     width: 100%;
@@ -800,11 +804,6 @@ html, body{
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 }
-
-
-
-
-
 
 
     .top-sellers .grid .card-menu{
@@ -832,7 +831,7 @@ html, body{
             }
 
 .top-sellers .box{
-    height: 649px;
+    height: 676px;
     border-radius: var(--border-radius-small);
     background-color: var(--color-gray-3);
     overflow: hidden;
@@ -861,7 +860,7 @@ html, body{
         top: 20px;
     }
     .top-sellers .box-thin{
-        height: 302px;
+        height: 328px;
         border-radius: var(--border-radius-small);
         background-color: var(--color-gray-3);
         overflow: hidden;
@@ -968,10 +967,10 @@ html, body{
         }
         .subscribe #subform button{
             position: absolute;
-            top: 10%;
+            top: 9%;
             right: 1%;
             width: 120px;
-            height: 80%;
+            height: 82%;
             background-color: var(--color-theme);
             color: var(--color-white);
             border: none;
@@ -984,7 +983,7 @@ html, body{
 .subscribe .greybox{
     position: absolute;
     top: 0;
-    right: -2px;
+    right: 0;
     background-color: var(--color-gray-1);
     height: 100%;
     width: 50%;
@@ -1130,7 +1129,7 @@ html, body{
 .site-title{
     background-color: var(--color-theme-shadow);
     color: #fff;
-    padding: 3rem 0;
+    padding: 2.8rem 0;
 }
 .site-title .container{
     display: flex;
@@ -1146,8 +1145,6 @@ html, body{
 .site-title ul{
     display: flex;
     align-items: center;
-    margin: 0;
-    padding: 0;
     list-style: none;
 }
 .site-title .breadcrumb{
