@@ -349,9 +349,9 @@ html, body{
             .Menu .browse-categories:hover .dropdown-menu--animated{
                 display: block;   
             }
-            .dropdown-menu-browse{
+            .Menu .browse-categories .dropdown-menu-browse{
                 animation: growDown 300ms ease-in-out forwards;
-                transform-origin: top center;
+                transform-origin: top;
 
             }
             
@@ -428,48 +428,48 @@ html, body{
 .webshop-info{
     padding: 4rem 0;
 }
-.webshop-info .container{
-    display: grid;
-    justify-content: space-evenly;
-    max-width: 1600px;
-}
-.webshop-info .box{
-    border-radius: var(--border-radius-small);
-    padding: 1rem;
-    background-color: var(--color-theme-light);
-    display: flex;
-    align-items: center;
-    margin: 1rem;
-    flex: 1;
-    transition: 0.2s;
-
-}
-    .webshop-info .box:hover{
-        background-color: var(--color-theme);
-        color: var(--color-white);
+    .webshop-info .container{
+        display: grid;
+        justify-content: space-evenly;
+        max-width: 1600px;
     }
-
-    .webshop-info .box img{
-        margin-right: 1.5rem;
-        transition: 0.2s ease-in-out;
-    }
-        .webshop-info .box:hover img{
-            mix-blend-mode: color-dodge;
-            filter: brightness(9);
-            transform: scale(1.2);
-        }
-    .webshop-info .box h1{
-        color: var(--color-theme);
-        font-size: 1rem;
-        font-weight: var(--font-weight-medium);
-        transition: 0.2s ease-in-out;
+    .webshop-info .box{
+        border-radius: var(--border-radius-small);
+        padding: 1rem;
+        background-color: var(--color-theme-light);
+        display: flex;
+        align-items: center;
+        margin: 1rem;
+        flex: 1;
+        transition: 0.2s;
 
     }
-        .webshop-info .box:hover h1{
+        .webshop-info .box:hover{
+            background-color: var(--color-theme);
             color: var(--color-white);
-            transform: scale(1.2);
-            margin-left: 0.8rem;
         }
+
+        .webshop-info .box img{
+            margin-right: 1.5rem;
+            transition: 0.2s ease-in-out;
+        }
+            .webshop-info .box:hover img{
+                mix-blend-mode: color-dodge;
+                filter: brightness(9);
+                transform: scale(1.2);
+            }
+        .webshop-info .box h1{
+            color: var(--color-theme);
+            font-size: 1rem;
+            font-weight: var(--font-weight-medium);
+            transition: 0.2s ease-in-out;
+
+        }
+            .webshop-info .box:hover h1{
+                color: var(--color-white);
+                transform: scale(1.2);
+                margin-left: 0.8rem;
+            }
 
 /* shop by category grid */
     .shop-by-category .grid{
@@ -523,8 +523,6 @@ html, body{
                 transform: scale(1.2);
                 opacity: 100%;
             }
-
-
 
 
 
@@ -607,27 +605,27 @@ html, body{
     position: relative;
     transition: 0.2s ease-in-out;
 }
-.new-arrivals .box .new-box-title{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 0.5rem 1rem;
-    height: 2.3rem;
-    font-weight: var(--font-weight-medium);
-    background-color: var(--color-theme-dark);
-    color: var(--color-white);
-    transition: 0.2s ease-in-out;
-}
-    .new-arrivals .box:hover .new-box-title{
-        padding-top: 55%;
-        margin-top: 0;
-        height: 100%;
-        opacity: 80%;
-        line-height: 2rem; 
+    .new-arrivals .box .new-box-title{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        height: 2.3rem;
+        font-weight: var(--font-weight-medium);
+        background-color: var(--color-theme-dark);
+        color: var(--color-white);
+        transition: 0.2s ease-in-out;
     }
-    .new-arrivals .box:hover .card-menu{
-        top: 20px;
-    }
+        .new-arrivals .box:hover .new-box-title{
+            padding-top: 55%;
+            margin-top: 0;
+            height: 100%;
+            opacity: 80%;
+            line-height: 2rem; 
+        }
+        .new-arrivals .box:hover .card-menu{
+            top: 20px;
+        }
 
 
     .new-arrivals .new-box-title h1{
